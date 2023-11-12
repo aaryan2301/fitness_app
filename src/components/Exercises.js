@@ -8,8 +8,8 @@ import Loader from './Loader';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [exercisesPerPage] = useState(6);
-
+  const exercisesPerPage = 6;
+  
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
@@ -19,10 +19,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
-
+    
       setExercises(exercisesData);
     };
-
+    
     fetchExercisesData();
   }, [bodyPart]);
 

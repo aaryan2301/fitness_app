@@ -1,9 +1,10 @@
 export const exerciseOptions = {
   method: 'GET',
+  params: {limit: '200'},
   headers: {
-    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-  },
+    'X-RapidAPI-Key': '035ad44342msha264ebda7b3dbdbp1205b1jsnbd25e58d15d6',
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+  }
 };
 
 export const youtubeOptions = {
